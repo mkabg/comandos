@@ -1,0 +1,25 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace comandos
+{
+    internal class SeaCommando: Commando
+    {
+        public string UnitName { get; set; }
+
+        public SeaCommando(string name, string codeName, string status, string unitName) :base(name, codeName, status)
+        {
+            this.UnitName = unitName;
+        }
+
+        public void Swimming()
+        {
+            Console.WriteLine($"the {CodeName} is Swimming");
+            this.Status = "Swimming";
+        }
+
+    }
+}

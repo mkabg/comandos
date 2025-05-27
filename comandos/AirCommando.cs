@@ -9,7 +9,7 @@ namespace comandos
     internal class AirCommando : Commando
     {
         
-        private string UnitName;
+        public string UnitName { get; set; }
 
         public AirCommando(string name, string codeName, string status, string unitName) :base(name, codeName, status)
         {
