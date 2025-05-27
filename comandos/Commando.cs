@@ -8,7 +8,7 @@ namespace comandos
 {
     internal class Commando
     {
-        private string Name;
+        protected string Name;
         public string CodeName { get; set; }
         public string[] Tools = { "hammer", "chisel", "rope", "bag", "water bottle" };
         public string Status;
@@ -49,7 +49,7 @@ namespace comandos
             this.Status = "hiding";
         }
         
-        public void Attack()
+        public virtual void Attack()
         {
             Console.WriteLine($"the {CodeName} is attack");
         }

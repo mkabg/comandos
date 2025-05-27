@@ -21,5 +21,10 @@ namespace comandos
             Console.WriteLine($"the {CodeName} is parachuting");
             this.Status = "parachuting";
         }
+
+        public override void Attack()
+        {
+            Console.WriteLine($"the air commando {CodeName} is attack");
+        }
     }
 }

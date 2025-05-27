@@ -21,5 +21,10 @@ namespace comandos
             this.Status = "Swimming";
         }
 
+        public override void Attack()
+        {
+            Console.WriteLine($"the sea commando {CodeName} is attack");
+        }
+
     }
 }
