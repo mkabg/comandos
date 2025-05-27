@@ -8,16 +8,33 @@ namespace comandos
 {
     internal class Commando
     {
-        public string Name, CodeName;
-        public string[] Tools;
+        private string Name;
+        public string CodeName { get; set; }
+        public string[] Tools = { "hammer", "chisel", "rope", "bag", "water bottle" };
         public string Status;
 
-        public Commando(string name, string codeName, string[] tools, string status)
+        public Commando(string name, string codeName, string status)
         {
             this.Name = name;
             this.CodeName = codeName;
-            this.Tools = tools;
             this.Status = status;
+        }
+
+        public string SayName(string commanderRank)
+        {
+            if (commanderRank == "General")
+            {
+                return Name;
+            }
+            else if (commanderRank == "Colonel")
+            {
+                return CodeName;
+            }
+            else
+            {
+                Console.WriteLine("you dont heve permision for this intel");
+                return "";
+            }
         }
 
         public void Walk()
