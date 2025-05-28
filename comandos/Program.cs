@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace comandos
 {
@@ -10,11 +7,11 @@ namespace comandos
     {
         static void Main(string[] args)
         {
-            Commando c1 = new Commando("mordecahi", "ABG", "stand");
+            Commando c1 = CreateCommando.Create("army", "mordecahi", "ABG", "stand", "Artillery");
 
-            AirCommando ac1 = new AirCommando("yakov", "1", "stand", "669");
+            Commando ac1 = CreateCommando.Create("air", "yakov", "1", "stand", "669");
 
-            SeaCommando sc1 = new SeaCommando("avi", "123", "stand", "Shayetet 13");
+            Commando sc1 = CreateCommando.Create("sea", "avi", "123", "stand", "Shayetet 13");
 
             Weapon w1 = new Weapon("M16", "Colt", 22);
 
@@ -29,6 +26,7 @@ namespace comandos
             ////stage 2
             //Console.WriteLine(c1.SayName("General"));
             //Console.WriteLine(c1.SayName("Colonel"));
+            //Console.WriteLine(c1.SayName("Colone"));
             //c1.CodeName = "B&H";
             //Console.WriteLine(c1.CodeName);
 
@@ -42,7 +40,7 @@ namespace comandos
             //Console.WriteLine(sc1.Status);
 
             //stage 4
-            Commando[] commandos = new Commando[] {c1, ac1, sc1};
+            Commando[] commandos = new Commando[] { c1, ac1, sc1 };
             sc1.Walk();
             foreach (Commando c in commandos)
             {

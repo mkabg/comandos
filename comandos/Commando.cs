@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace comandos
 {
@@ -20,21 +17,9 @@ namespace comandos
             this.Status = status;
         }
 
-        public string SayName(string commanderRank)
+        public string SayName(string rank)
         {
-            if (commanderRank == "General")
-            {
-                return Name;
-            }
-            else if (commanderRank == "Colonel")
-            {
-                return CodeName;
-            }
-            else
-            {
-                Console.WriteLine("you dont heve permision for this intel");
-                return "";
-            }
+            return Permissions.SayName(rank, Name, CodeName);
         }
 
         public void Walk()
